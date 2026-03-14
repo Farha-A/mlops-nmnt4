@@ -67,7 +67,8 @@ class Discriminator(nn.Module):
 
     def discriminator_block(self, in_dimension, out_dimension):
         return nn.Sequential(
-            nn.Linear(in_dimension, out_dimension), nn.LeakyReLU(0.2, inplace=True)
+            nn.Linear(in_dimension, out_dimension), 
+            nn.LeakyReLU(0.2, inplace=True)
         )
 
 
@@ -101,7 +102,8 @@ def get_disc_loss(
     # All of them will got label as 0
     # .detach() ensures that only discriminator parameters will get update
     disc_fake_pred = disc(fake.detach())
-    disc_fake_loss = criterion(disc_fake_pred, torch.zeros_like(disc_fake_pred))
+    disc_fake_loss = criterion(disc_fake_pred, 
+    torch.zeros_like(disc_fake_pred))
 
     # Pass real features to discriminator
     # All of them will got label as 1
