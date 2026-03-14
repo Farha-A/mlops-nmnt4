@@ -11,8 +11,6 @@ from torchvision.utils import make_grid
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 torch.manual_seed(13)
-import logging
-
 
 # In[2]:
 
