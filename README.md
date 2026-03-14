@@ -20,6 +20,7 @@ The basic pipeline steps include:
 3. Installing dependencies from `requirements.txt`
 4. Running a Linter check
 5. Bootstrapping a dry test of the Model Environment
+6. Uploading the `README.md` file as a GitHub artifact named `project-doc`
 
 ## Dependencies
 
